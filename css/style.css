@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap');
+
+/* ******* variables ******* */
+:root{
+	--heading-color: #fff;
+	--text-color: #999;
+	--tag-color: #aaa;
+	--tag-bgc: #222;
+}
+
+/* *******reset******* */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: unset;
+	font-weight: normal;
+}
+
+/* *******layout******* */
+
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* *******typography******* */
+
+:root{
+	font-family: "arial", sans-serif;
+	font-size: 62.5%;
+}
+
+/* *******component******* */
+
+/* header */
+header .cover{
+	background: url("../images/cover.png") no-repeat top center /cover;
+	min-height: 676px;
+	position: relative;
+}
+
+header .cover::after{
+	content: "";
+	position: absolute; left: 0; right: 0; top: 70%; bottom: 0;
+	background: linear-gradient(0deg, #111 0%, rgba(17, 17, 17, 0.00) 81.45%);
+
+}
+
+/* contents */
+
+body{
+	background-color: #222;
+}
+
+.wrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.contents{
+	display: flex;
+	background: #000;
+  color: var(--text-color);
+	padding: 60px;
+	gap: 100px;
+}
+
+.texts{
+	max-width: 700px;
+}
+
+.texts span{
+	display: inline-block;
+	background-color: #FF2E00;
+	color: #fff;
+	border-radius: 8px;
+	padding: 7px 12px;
+}
+
+.texts h1{
+	color: var(--heading-color);
+	font-size: 6.4rem;
+	font-weight: 700;
+	margin-bottom: 26px;
+}
+
+.texts p{
+	font-size: 1.6rem;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+	margin-bottom: 30px;
+}
+
+.texts p:last-child{
+	margin-bottom: 0;
+}
+
+.info{
+	display: flex;
+	flex-direction: column;
+}
+
+.info > div{
+	margin-bottom: 40px;
+}
+
+.info > div > h2{
+	color: var(--heading-color);
+	font-weight: 700;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+.genre .tags{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.tag{
+	color: var(--tag-color);
+	background-color: var(--tag-bgc);
+	padding: 0 14px;
+	line-height: 1.6;
+	border-radius: 12px;
+	font-size: 1.4rem;
+}
+
+.ratings .stars{
+	display: flex;
+}
+
+.ratings .stars > div{
+	width: 48px;
+	height: 48px;
+	background-size: 240px 96px;
+}
+
+.fullStar{
+	background: url("../images/star.png") no-repeat left bottom;
+}
+
+.emptyStar{
+	background: url("../images/star.png") no-repeat left top;
+}
+
+.casts .cast > div{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	border: 4px solid #111;
+	background-size: cover;
+	margin-left: -14px;
+}
+
+.casts .cast > div:nth-of-type(1){
+	margin-left: 0;
+}
+
+.dad{
+	background-image: url("../images/member01.png");
+}
+
+.son{
+	background-image: url("../images/member02.png");
+}
+
+.mom{
+	background-image: url("../images/member03.png");
+}
+
+.daughter{
+	background-image: url("../images/member04.png");
+}
